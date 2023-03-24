@@ -18,7 +18,7 @@ load("encoding/json.star", "json")
 OAUTH2_CLIENT_SECRET = secret.decrypt("ZrXkxB0KlVKeXJ7Z")
 
 EXAMPLE_PARAMS = """
-{"code": "your-code", "grant_type": "authorization_code", "client_id": "dAnsdSoFNRyBwrO1w2oOJmYfu2s12Zwo", "redirect_uri": "https://728e-2600-4040-7075-a200-f0ba-334c-2c24-7943.ngrok.io"}
+{"code": "your-code", "grant_type": "authorization_code", "client_id": "dTnsdSoFNRyBwrO1w2oOJmYfu2s12Zwo", "redirect_uri": "https://728e-2600-4040-7075-a200-f0ba-334c-2c24-7943.ngrok.io"}
 """
 
 params = {"code": "your-code", "grant_type": "authorization_code", "client_id": "dAnsdSoFNRyBwrO1w2oOJmYfu2s12Zwo", "redirect_uri": "https://728e-2600-4040-7075-a200-f0ba-334c-2c24-7943.ngrok.io"}
