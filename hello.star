@@ -1,6 +1,9 @@
 load("render.star", "render")
 
-def main():
+def main(config):
     return render.Root(
-        child = render.Text("Hello, World!")
+        delay = 500,
+        child = render.Box(
+            color= "#00f",
+        ),
     )
