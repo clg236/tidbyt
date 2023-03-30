@@ -23,14 +23,15 @@ def get_token():
     return access_token
 
 def get_glocose(access_token):
-    res = http.post(
+    # get(url,params={},headers={},auth=()) response
+    res = http.get(
         url = "https://sandbox-api.dexcom.com/v3/users/self/events",
         headers = {
             "Authorization": "Bearer " + access_token
         },
-        form_body = dict(
-            startDate = "2019-08-24T14:15:22Z",
-            endDate = "2019-08-24T14:15:22Z"
+        params = dict(
+            startDate = "2019-08-20T14:15:22",
+            endDate = "2019-08-24T14:15:22"
 
         )
     )
@@ -50,15 +51,6 @@ def main():
     return render.Root(
         child = render.Marquee(
             width = 64,
-            child = render.Text("welcome!"),
-        ),
-        render.Animation(
-            children=[
-                render.Box(width=10, height=10, color="#300"),
-                render.Box(width=12, height=12, color="#500"),
-                render.Box(width=14, height=14, color="#700"),
-                render.Box(width=16, height=16, color="#900"),
-                render.Box(width=18, height=18, color="#b00"),
-            ],
-)
+            child = render.Text("welcome!")
+        )
     )
